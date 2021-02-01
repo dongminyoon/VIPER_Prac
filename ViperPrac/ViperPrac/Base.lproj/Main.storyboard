@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uxm-Tg-lud">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Cars View Controller-->
+        <scene sceneID="Ha3-8N-DZb">
+            <objects>
+                <viewController storyboardIdentifier="CarsViewController" id="B6R-ph-71i" customClass="CarsViewController" customModule="ViperPrac" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2bs-BF-mfs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fz8-SI-htM">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CarCell" rowHeight="103" id="04U-zB-V5M" customClass="CarCell" customModule="ViperPrac" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="103"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="04U-zB-V5M" id="EHR-4a-9cy">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="103"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rVu-np-g06">
+                                                    <rect key="frame" x="30" y="21" width="54" height="25"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bw6-yx-l1B">
+                                                    <rect key="frame" x="30" y="56" width="54" height="26"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="rVu-np-g06" firstAttribute="top" secondItem="EHR-4a-9cy" secondAttribute="topMargin" priority="999" constant="10" id="7qT-kG-LTc"/>
+                                                <constraint firstItem="rVu-np-g06" firstAttribute="leading" secondItem="EHR-4a-9cy" secondAttribute="leadingMargin" constant="10" id="Fca-Ch-wbv"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="bw6-yx-l1B" secondAttribute="bottom" priority="999" constant="10" id="MZ0-XK-GfE"/>
+                                                <constraint firstItem="bw6-yx-l1B" firstAttribute="top" secondItem="rVu-np-g06" secondAttribute="bottom" priority="999" constant="10" id="d4E-64-dfo"/>
+                                                <constraint firstItem="bw6-yx-l1B" firstAttribute="leading" secondItem="EHR-4a-9cy" secondAttribute="leadingMargin" constant="10" id="hy5-So-gUx"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="makeName" destination="rVu-np-g06" id="Oum-yS-dK8"/>
+                                            <outlet property="modelName" destination="bw6-yx-l1B" id="Gmp-Wd-ynW"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jGP-eM-iEM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jGP-eM-iEM" firstAttribute="trailing" secondItem="fz8-SI-htM" secondAttribute="trailing" id="2zg-6w-Inh"/>
+                            <constraint firstItem="jGP-eM-iEM" firstAttribute="bottom" secondItem="fz8-SI-htM" secondAttribute="bottom" id="4Fg-Zi-mg5"/>
+                            <constraint firstItem="fz8-SI-htM" firstAttribute="leading" secondItem="jGP-eM-iEM" secondAttribute="leading" id="6vi-Mw-5fZ"/>
+                            <constraint firstItem="fz8-SI-htM" firstAttribute="top" secondItem="jGP-eM-iEM" secondAttribute="top" id="yj3-C7-7Go"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="7B4-GF-IrK"/>
+                    <connections>
+                        <outlet property="tableView" destination="fz8-SI-htM" id="qS3-vO-eU6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VmN-Cv-NOp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="917.39130434782612" y="120.53571428571428"/>
+        </scene>
+        <!--Car Detail View Controller-->
+        <scene sceneID="RQK-Tb-Emt">
+            <objects>
+                <viewController storyboardIdentifier="CarDetailViewController" id="gLd-GI-Yay" customClass="CarDetailViewController" customModule="ViperPrac" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Bkv-qs-4Ma">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="TQ1-fC-ME9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vNH-iw-5GA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1644.9275362318842" y="120.53571428571428"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="kok-Bt-tLA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uxm-Tg-lud" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vdA-1Y-frl">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="B6R-ph-71i" kind="relationship" relationship="rootViewController" id="LI0-64-mXB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UfE-HR-d21" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7.2463768115942031" y="120.53571428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
