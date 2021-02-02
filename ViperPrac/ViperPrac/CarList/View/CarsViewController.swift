@@ -8,10 +8,12 @@
 import UIKit
 
 class CarsViewController: UIViewController {
+    static let identifier = "CarsViewController"
+    
     @IBOutlet weak var tableView: UITableView!
     
     var presenter: CarsPresenterProtocol!
-    var viewModels: [CarViewModel] = []
+    var viewModels: [CarDTO] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +25,7 @@ class CarsViewController: UIViewController {
     
     private func setTableView() {
         tableView.dataSource = self
+        tableView.delegate = self
         tableView.estimatedRowHeight = UITableView.automaticDimension
         
         let refreshControl = UIRefreshControl()
@@ -54,5 +57,11 @@ extension CarsViewController: UITableViewDataSource {
         guard let carCell = tableView.dequeueReusableCell(withIdentifier: CarCell.identifier) as? CarCell else { return UITableViewCell() }
         carCell.configure(from: viewModels[indexPath.row])
         return carCell
+    }
+}
+
+extension CarsViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter.showCarDetail(for: viewModels[indexPath.row])
     }
 }

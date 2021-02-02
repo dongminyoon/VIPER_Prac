@@ -13,6 +13,7 @@ protocol CarDetailRouterProtocol {
 
 class CarDetailRouter: CarDetailRouterProtocol {
     static func createCarDetailModule() -> UIViewController {
+        guard let detailVC = UIComponents.mainStoryboard.instantiateViewController(withIdentifier: "CarDetailViewController") as? CarDetailViewController else { return UIViewController() }
         
         return UIViewController()
     }

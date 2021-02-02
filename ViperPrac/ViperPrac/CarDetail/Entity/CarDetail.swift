@@ -12,4 +12,15 @@ struct CarDetail {
     let make: String
     let model: String
     let trim: String
+    
+    func makeDetailDTO() -> CarDetailDTO {
+        return CarDetailDTO(make: self.make,
+                            model: self.model)
+    }
+}
+
+struct CarDetailDTO {
+    let make: String
+    let model: String
+
 }

@@ -12,6 +12,7 @@
 		CE811DB525C7F7CC00EDF26C /* CarDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE811DB425C7F7CC00EDF26C /* CarDetailInteractor.swift */; };
 		CE811DBA25C7F87100EDF26C /* CarDetailAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE811DB925C7F87100EDF26C /* CarDetailAPIService.swift */; };
 		CE811DBF25C7F9FE00EDF26C /* CarDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE811DBE25C7F9FE00EDF26C /* CarDetail.swift */; };
+		CEE4471025C8E5C80000B48D /* CarDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE4470F25C8E5C80000B48D /* CarDetailPresenter.swift */; };
 		CEEB334F25C79D68007CCEF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEB334E25C79D68007CCEF0 /* AppDelegate.swift */; };
 		CEEB335125C79D68007CCEF0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEB335025C79D68007CCEF0 /* SceneDelegate.swift */; };
 		CEEB335625C79D68007CCEF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEEB335425C79D68007CCEF0 /* Main.storyboard */; };
@@ -52,6 +53,7 @@
 		CE811DB425C7F7CC00EDF26C /* CarDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailInteractor.swift; sourceTree = "<group>"; };
 		CE811DB925C7F87100EDF26C /* CarDetailAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailAPIService.swift; sourceTree = "<group>"; };
 		CE811DBE25C7F9FE00EDF26C /* CarDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetail.swift; sourceTree = "<group>"; };
+		CEE4470F25C8E5C80000B48D /* CarDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailPresenter.swift; sourceTree = "<group>"; };
 		CEEB334B25C79D68007CCEF0 /* ViperPrac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViperPrac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEEB334E25C79D68007CCEF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEEB335025C79D68007CCEF0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 		CEEB33BA25C7EA24007CCEF0 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				CEE4470F25C8E5C80000B48D /* CarDetailPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -402,6 +405,7 @@
 				CEEB33BD25C7EA44007CCEF0 /* CarDetailRouter.swift in Sources */,
 				CE6CCA2525C7EB8600A3C0A7 /* UIComponents.swift in Sources */,
 				CEEB334F25C79D68007CCEF0 /* AppDelegate.swift in Sources */,
+				CEE4471025C8E5C80000B48D /* CarDetailPresenter.swift in Sources */,
 				CEEB338725C7C79D007CCEF0 /* Car.swift in Sources */,
 				CEEB338C25C7C95E007CCEF0 /* CarsInteractor.swift in Sources */,
 				CE811DBF25C7F9FE00EDF26C /* CarDetail.swift in Sources */,

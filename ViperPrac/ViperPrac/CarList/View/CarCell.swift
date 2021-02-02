@@ -24,7 +24,7 @@ class CarCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configure(from carModel: CarViewModel) {
+    func configure(from carModel: CarDTO) {
         makeName.text = carModel.make
         modelName.text = carModel.model
     }

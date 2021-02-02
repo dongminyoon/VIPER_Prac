@@ -16,15 +16,19 @@ struct Car {
     let make: String
     let model: String
     let trim: String
+    
+    func makeCarDTO() -> CarDTO {
+        return CarDTO(make: self.make,
+                      model: self.model)
+    }
 }
 
 /*
-ViewModel
+DTO
 : API 콜로부터 불러온 Entity를 화면에 보여주기 위한 Model
 : 보통 Presenter로부터 생성되어 View로 전달
- 
 */
-struct CarViewModel {
+struct CarDTO {
     let make: String
     let model: String
 }

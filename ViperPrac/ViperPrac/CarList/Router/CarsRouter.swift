@@ -14,7 +14,7 @@ import UIKit
  */
 protocol CarsRouterProtocol {
     static func createCarsListModule() -> UIViewController
-    func showCarDetail(for viewModel: CarViewModel)
+    func showCarDetail(for viewModel: CarDTO)
     func showCreateCarScreen()
 }
 
@@ -33,7 +33,6 @@ class CarsRouter: CarsRouterProtocol {
     static func createCarsListModule() -> UIViewController {
         guard let rootNavi = UIApplication.shared.windows.filter({ $0.isKeyWindow }).first?.rootViewController as? UINavigationController,
               let carsListVC = rootNavi.topViewController as? CarsViewController else { return UIViewController() }
-        
         let carsAPIService: CarsAPIServiceProtocol = CarsAPIService()
         let carsInteractor: CarsInteractorProtocol = CarsInteractor(apiService: carsAPIService)
         let carsRouter: CarsRouterProtocol = CarsRouter(presentingViewController: carsListVC)
@@ -48,16 +47,15 @@ class CarsRouter: CarsRouterProtocol {
      - 현재 뷰로부터 다음 Detial 뷰를 띄우기 위한 로직이 필요한 Method
      - 보통 UIViewController들을 다루고 Data를 바인딩
      */
-    func showCarDetail(for viewModel: CarViewModel) {
+    func showCarDetail(for viewModel: CarDTO) {
         guard let navigationController = presentingViewController.navigationController else {
             return
         }
         
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let carDetailViewController = storyboard.instantiateViewController(withIdentifier: "CarDetailViewController")
-//        carDetailViewController.viewModel = viewModel
+        guard let carDetailVC = UIComponents.mainStoryboard.instantiateViewController(withIdentifier: CarDetailViewController.identifier) as? CarDetailViewController else { return }
+        carDetailVC.carDetailDTO = viewModel
         
-        navigationController.pushViewController(carDetailViewController, animated: true)
+        navigationController.pushViewController(carDetailVC, animated: true)
     }
     
     /*
