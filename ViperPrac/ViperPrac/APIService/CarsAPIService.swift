@@ -21,13 +21,15 @@ protocol CarsAPIServiceProtocol {
  */
 class CarsAPIService: CarsAPIServiceProtocol {
     func requestCars(completion: ([Car]?, NSError?) -> Void) {
-        let carsItem: [Car] = [
+        var carsItem: [Car] = [
             Car(id: "1", make: "현대", model: "Avante", trim: "222"),
             Car(id: "2", make: "기아", model: "K5", trim: "333"),
             Car(id: "3", make: "BMW", model: "520d", trim: "4444"),
             Car(id: "4", make: "Mercedes-Benz", model: "C class", trim: "5555"),
             Car(id: "5", make: "기아", model: "K3", trim: "6666")
         ]
+        
+        carsItem.shuffle()
         
         completion(carsItem, nil)
     }

@@ -34,8 +34,9 @@ class CarsViewController: UIViewController {
     }
     
     @objc func reloadCars() {
-        DispatchQueue.main.asyncAfter(deadline: .now()+3, execute: {
-            self.tableView.refreshControl?.endRefreshing()
+        DispatchQueue.main.asyncAfter(deadline: .now()+3, execute: { [weak self] in
+            self?.showCars()
+            self?.tableView.refreshControl?.endRefreshing()
         })
     }
     
