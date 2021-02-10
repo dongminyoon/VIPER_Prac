@@ -9,7 +9,7 @@ import XCTest
 import UIKit
 @testable import VIPER_UnitTest
 
-class GitSearchServiceSuccessMock: GithubSearchServiceProtocol {
+fileprivate final class GitSearchServiceSuccessMock: GithubSearchServiceProtocol {
     var networkMaterial: String?
     
     func fetchUserRepos(from userName: String,
@@ -21,7 +21,7 @@ class GitSearchServiceSuccessMock: GithubSearchServiceProtocol {
     }
 }
 
-class GitSearchServiceFailureMock: GithubSearchServiceProtocol {
+fileprivate final class GitSearchServiceFailureMock: GithubSearchServiceProtocol {
     var networkMaterial: String?
     
     func fetchUserRepos(from userName: String,
@@ -32,8 +32,7 @@ class GitSearchServiceFailureMock: GithubSearchServiceProtocol {
     }
 }
 
-// FIXME: - Interactor Unit Test 다시 필요
-class GitSearchPresenterMock: GitSearchPresenterProtocol {
+fileprivate final class GitSearchPresenterMock: GitSearchPresenterProtocol {
     var isSuccess: Bool?
     
     var interactor: GitSearchInteractorProtool

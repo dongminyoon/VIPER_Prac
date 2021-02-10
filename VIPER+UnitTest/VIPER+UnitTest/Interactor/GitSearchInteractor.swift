@@ -8,8 +8,6 @@
 import Foundation
 
 protocol GitSearchInteractorProtool {
-    var presenter: GitSearchPresenterProtocol? { get set }
-    
     func fetchUserRepos(from userName: String)
 }
 

@@ -8,8 +8,6 @@
 import UIKit
 
 protocol GitSearchRouterProtocol {
-    var presentingViewController: UIViewController? { get set }
-    
     static func createGitSearchModule() -> UIViewController
     func presentFailAlertView(by error: NSError)
 }
