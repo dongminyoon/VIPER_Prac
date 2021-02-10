@@ -12,6 +12,7 @@
 		CE811DB525C7F7CC00EDF26C /* CarDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE811DB425C7F7CC00EDF26C /* CarDetailInteractor.swift */; };
 		CE811DBA25C7F87100EDF26C /* CarDetailAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE811DB925C7F87100EDF26C /* CarDetailAPIService.swift */; };
 		CE811DBF25C7F9FE00EDF26C /* CarDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE811DBE25C7F9FE00EDF26C /* CarDetail.swift */; };
+		CE87379E25CD0A1200ECBB6B /* CarsAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE87379D25CD0A1200ECBB6B /* CarsAPITests.swift */; };
 		CEE4471025C8E5C80000B48D /* CarDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE4470F25C8E5C80000B48D /* CarDetailPresenter.swift */; };
 		CEEB334F25C79D68007CCEF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEB334E25C79D68007CCEF0 /* AppDelegate.swift */; };
 		CEEB335125C79D68007CCEF0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEB335025C79D68007CCEF0 /* SceneDelegate.swift */; };
@@ -53,6 +54,7 @@
 		CE811DB425C7F7CC00EDF26C /* CarDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailInteractor.swift; sourceTree = "<group>"; };
 		CE811DB925C7F87100EDF26C /* CarDetailAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailAPIService.swift; sourceTree = "<group>"; };
 		CE811DBE25C7F9FE00EDF26C /* CarDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetail.swift; sourceTree = "<group>"; };
+		CE87379D25CD0A1200ECBB6B /* CarsAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsAPITests.swift; sourceTree = "<group>"; };
 		CEE4470F25C8E5C80000B48D /* CarDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarDetailPresenter.swift; sourceTree = "<group>"; };
 		CEEB334B25C79D68007CCEF0 /* ViperPrac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViperPrac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEEB334E25C79D68007CCEF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 			children = (
 				CEEB336525C79D70007CCEF0 /* ViperPracTests.swift */,
 				CEEB336725C79D70007CCEF0 /* Info.plist */,
+				CE87379D25CD0A1200ECBB6B /* CarsAPITests.swift */,
 			);
 			path = ViperPracTests;
 			sourceTree = "<group>";
@@ -425,6 +428,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEEB336625C79D70007CCEF0 /* ViperPracTests.swift in Sources */,
+				CE87379E25CD0A1200ECBB6B /* CarsAPITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

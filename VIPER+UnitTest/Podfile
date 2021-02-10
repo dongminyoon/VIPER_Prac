@@ -1,0 +1,22 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'VIPER+UnitTest' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+  
+  pod 'RxSwift'
+  pod 'RxCocoa'   
+  pod 'Moya', '~> 14.0'
+  # Pods for VIPER+UnitTest
+
+  target 'VIPER+UnitTestTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'VIPER+UnitTestUITests' do
+    # Pods for testing
+  end
+
+end
